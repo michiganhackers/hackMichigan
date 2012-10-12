@@ -5,7 +5,7 @@
 
 
 var verbs = ['code','hack','learn','build','think','test'];
-var eventName = 'MHACKS:impact'
+var eventName = 'MHACKS:Impact'
 exports.index = function(req, res){
 	i = Math.floor(Math.random()*verbs.length);
 	// eventually this might be cooler to have change after page load?
