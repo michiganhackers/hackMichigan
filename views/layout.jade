@@ -1,7 +1,11 @@
 doctype 5
-html
+html(xmlns='http://www.w3.org/1999/xhtml', xmlns:og='http://ogp.me/ns#', xmlns:fb='https://www.facebook.com/2008/fbml')
+
+
 	head
 		title= title
+		meta(property='og:image', content='http://www.hackmichigan.com/images/hackm.png')
+
 		link(rel='stylesheet', href='/stylesheets/style.css')
 		script(src="/javascripts/jquery.min.js")
 		script(type="text/javascript")
@@ -18,7 +22,7 @@ html
 
 
 	body
-		.container
+		.container.push
 			.nav
 				.nav-title
 					.pres Michigan Hackers Present:
@@ -30,3 +34,10 @@ html
 					a.link(href="/contact") contact
 
 			block content
+		.container
+			p.foot Build by 
+				a(href="http://www.michiganhackers.org") Michigan Hackers
+				|  in Ann Arbor
+			p.left
+					a(href="https://www.facebook.com/michiganhackers"): img(src="images/facebook.png")
+					a(href="https://twitter.com/MichiganHackers"): img(src="images/twitter.png")
