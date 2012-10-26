@@ -10,8 +10,13 @@ var express = require('express')
 
 var app = express();
 
-app.configure(function(){
-  app.set('port', 80);
+app.configure(function() {
+  if (process.env.PORT) {
+      app.set('port', process.env.PORT);
+  }
+  else {
+      app.set('port', 80);
+  }
   app.set('views', __dirname + '/views');
   app.set('view engine', 'jade');
   app.use(express.favicon(__dirname + '/public/images/favicon.ico'));
